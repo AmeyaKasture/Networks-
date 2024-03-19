@@ -9,7 +9,7 @@ Polling Socket Programming: The polling implementation illustrates how to use th
 Usage:
 To compile and run the code, follow these steps:
 
-1.Clone the repository to your local machine.
-2.Navigate to the directory containing the desired implementation.
-3.Compile the source code using a C compiler (e.g., GCC):
+1.Clone the repository to your local machine.  
+2.Navigate to the directory containing the desired implementation.  
+3.Compile the source code using a C compiler (e.g., GCC)
 
