@@ -1,0 +1,7 @@
+CLIENT: Ameya; MODE: passive
+CLIENT: alpha; MODE: active
+alpha: NOOP
+alpha: LIST
+alpha:Ameya
+alpha: EXIT
+SERVER TERMINATED: EXITING......
