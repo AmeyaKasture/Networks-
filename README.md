@@ -1,4 +1,4 @@
-# Networks-
+# Networks
 This repository showcases different implementations of network concepts, including socket programming with multithreaded and polling implementations. The code is written in C language, reflecting a high level of proficiency in this language.
 
 Implementations:
