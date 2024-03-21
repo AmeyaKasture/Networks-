@@ -19,6 +19,23 @@ void printPacket(struct packet *p){  //always follow this format for printing th
     printf("}\n");
 }
 
+
+int calculateChecksum(unsigned char * buffer) {
+    unsigned int sum = 0;
+    int length = buffer[1];
+    // Sum up all the bytes
+    for (int i = 0; i < length; i++) {
+        if(i==2)sum+=buffer[i]>>2;
+        else sum += buffer[i];
+    }
+
+    // Fold the sum into a 10-bit checksum
+
+    // Take the one's complement to get the checksum
+    return ~sum +1; // Mask to 10 bits
+}
+
+
 unsigned char* serialize( struct packet* p){
     unsigned char *buffer = (unsigned char *)malloc(1032 * sizeof(unsigned char));
     memset(buffer,0,1032);
@@ -45,7 +62,9 @@ unsigned char* serialize( struct packet* p){
         strcpy(buffer+6,p->data);
     }
     else strcpy(buffer+5,p->data);
-    
+    p->checkSum = calculateChecksum(buffer) & 0x3FF;
+    buffer[2]=  mask| (srcDept<< 5) | (destDept<< 2) | (uint8_t)(checkSum >>8);
+    buffer[3]= mask| (uint8_t)(checkSum &  masky);
     //code for serialization
     return buffer;
 }
@@ -87,12 +106,14 @@ struct packet *generatePacket(int version, int headerLength, int totalLength,
     p->totalLength = totalLength;
     p->srcDept = srcDept;
     p->destDept = destDept;
-    p->checkSum = checkSum;
     p->hops = hops;
     p->type = type;
     p->ACK = ACK;
     p->srcCampus = srcCampus;
     p->destCampus = destCampus;
     strcpy(p->data, data);
+    
+
+
     return p;
 }

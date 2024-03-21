@@ -27,6 +27,7 @@ struct packet {
 //You can add the implementations of functions in helper.c to avoid code cluttering
 
 void printPacket(struct packet *p);
+int calculateChecksum(unsigned char * buffer);
 unsigned char* serialize( struct packet* p);
 struct packet *deserialize(unsigned char* buffer);
 
