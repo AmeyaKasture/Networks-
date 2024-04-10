@@ -34,6 +34,8 @@ struct packet *deserialize(unsigned char* buffer);
 struct packet *generatePacket(int version, int headerLength, int totalLength, 
                               int srcDept, int destDept, int checkSum, int hops, 
                               int type, int ACK, int srcCampus, int destCampus, char* data);
-struct packet* generateUnicastPacket(char* input);
-struct packet* generateBroadcastPacket(char* input);
-struct packet* generateControlPacket(char* input);
+unsigned char* generateUnicastPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]);
+unsigned char* generateBroadcastPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]);
+unsigned char* generateControlPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]);
+unsigned char* getPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]);
+unsigned char* generateAcknowledgmentPacket(int srcDept,int destDept, int* validDept[3], int numOfValidDept[3]);

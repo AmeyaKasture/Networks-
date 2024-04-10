@@ -36,6 +36,116 @@ int calculateChecksum(unsigned char * buffer) {
 }
 
 
+unsigned char* generateUnicastPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]) {
+    if (srcCampus < 0 || srcCampus > 2) return NULL;
+
+    int flag = 0;
+    for (int i = 0; i < numOfValidDept[srcCampus]; i++) {
+        if (srcDept != validDept[srcCampus][i]) continue;
+        flag = 1;
+        break;
+    }
+    if (!flag) return NULL;
+
+    char inst = input[0];
+    if (inst == '1') {
+        if (strlen(input) < 5) return NULL;
+        int destCampus = input[2] - '0';
+        int destDept = input[4] - '0';
+        if (destCampus < 0 || destCampus > 2) return NULL;
+        int f = 0;
+        for (int i = 0; i < numOfValidDept[destCampus]; i++) {
+            if (destDept != validDept[destCampus][i]) continue;
+            f = 1;
+            break;
+        }
+        if (!f) return NULL;
+        char data[1024];
+        memset(data, 0, 1024);
+        strcpy(data, input + 6);
+        data[strlen(data) - 1] = 0;
+        struct packet* p = malloc(sizeof(struct packet));
+        p = generatePacket(2, 6, 6 + strlen(data), srcDept, destDept, 0, 0, 0, 0, srcCampus, destCampus, data);
+        return serialize(p);
+    }
+    else {
+        if (strlen(input) < 3) return NULL;
+        int destDept = input[2] - '0';
+        int f = 0;
+        for (int i = 0; i < numOfValidDept[srcCampus]; i++) {
+            if (destDept != validDept[srcCampus][i]) continue;
+            f = 1;
+            break;
+        }
+        if (!f) return NULL;
+        char data[1024];
+        memset(data, 0, 1024);
+        strcpy(data, input + 4);
+        data[strlen(data) - 1] = 0;
+        struct packet* p = malloc(sizeof(struct packet));
+        p = generatePacket(2, 5, 5 + strlen(data), srcDept, destDept, 0, 0, 0, 0, srcCampus, srcCampus, data);
+        return serialize(p);
+    }
+}
+
+unsigned char* generateBroadcastPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]) {
+    if (srcCampus < 0 || srcCampus > 2) return NULL;
+
+    int flag = 0;
+    for (int i = 0; i < numOfValidDept[srcCampus]; i++) {
+        if (srcDept != validDept[srcCampus][i]) continue;
+        flag = 1;
+        break;
+    }
+    if (!flag) return NULL;
+
+    char data[1024];
+    memset(data, 0, 1024);
+    strcpy(data, input + 2);
+    data[strlen(data) - 1] = 0;
+
+    struct packet* p = malloc(sizeof(struct packet));
+
+    char inst = input[0];
+    if (inst == '3') p = generatePacket(2, 5, 5 + strlen(data), srcDept, 7, 0, 0, 0, 0, srcCampus, srcCampus, data);
+    else p = generatePacket(2, 6, 6 + strlen(data), srcDept, 7, 0, 0, 0, 0, srcCampus, 15, data);
+
+    return serialize(p);
+}
+
+unsigned char* generateControlPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]) {
+    if (strcmp(input, "5.EXIT\n") != 0) return NULL;
+    struct packet* p = malloc(sizeof(struct packet));
+
+    p = generatePacket(2, 5, 5, srcDept, 0, 0, 0, 1, 0, 0, 0, "");
+
+    return serialize(p);
+}
+
+unsigned char* getPacket(char* input, int srcCampus, int srcDept, int* validDept[3], int numOfValidDept[3]) {
+    char inst = input[0];
+    if (inst == '1' || inst == '2') {
+        return generateUnicastPacket(input, srcCampus, srcDept, validDept, numOfValidDept);
+    }
+    else if (inst == '3' || inst == '4') {
+        return generateBroadcastPacket(input, srcCampus, srcDept, validDept, numOfValidDept);
+    }
+    else if (inst == '5') {
+        return generateControlPacket(input, srcCampus, srcDept, validDept, numOfValidDept);
+    }
+    else {
+        return NULL;
+    }
+}
+
+
+unsigned char* generateAcknowledgmentPacket(int srcDept,int destDept, int* validDept[3], int numOfValidDept[3]){
+     struct packet* p = malloc(sizeof(struct packet));
+     p = generatePacket(2, 5, 5, srcDept, destDept, 0, 0, 1, 1, 0, 0, "");
+     return serialize(p);
+}
+
+
 unsigned char* serialize( struct packet* p){
     unsigned char *buffer = (unsigned char *)malloc(1032 * sizeof(unsigned char));
     memset(buffer,0,1032);

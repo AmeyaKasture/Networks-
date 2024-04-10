@@ -1,0 +1,1260 @@
+source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+	target router=5
+1   buffered to->>> 1source router is2
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+1   buffered to->>> 1source router is0
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+1   buffered to->>> 1source router is2
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is3
+0   buffered to->>> 0source router is3
+1   buffered to->>> 1source router is3
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=-1
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+	target router=10
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+	target router=10
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+	target router=10
+3   buffered to->>> 3source router is3
+	target router=10
+0   buffered to->>> 0source router is3
+	target router=10
+1   buffered to->>> 1source router is3
+	target router=10
+2   buffered to->>> 2source router is0
+	target router=20
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=20
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=-1
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+	target router=10
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+	target router=10
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+	target router=10
+3   buffered to->>> 3source router is3
+	target router=10
+0   buffered to->>> 0source router is3
+	target router=10
+1   buffered to->>> 1source router is3
+	target router=10
+2   buffered to->>> 2source router is0
+	target router=20
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=20
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=-1
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+	target router=10
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+	target router=10
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+	target router=10
+3   buffered to->>> 3source router is3
+	target router=10
+0   buffered to->>> 0source router is3
+	target router=10
+1   buffered to->>> 1source router is3
+	target router=10
+2   buffered to->>> 2source router is0
+	target router=20
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=20
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=-1
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+	target router=10
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+	target router=10
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+	target router=10
+3   buffered to->>> 3source router is3
+	target router=10
+0   buffered to->>> 0source router is3
+	target router=10
+1   buffered to->>> 1source router is3
+	target router=10
+2   buffered to->>> 2source router is0
+	target router=20
+	target router=-1
+1   buffered to->>> 1source router is0
+	target router=20
+	target router=-1
+3   buffered to->>> 3source router is1
+	target router=20
+	target router=5
+0   buffered to->>> 0source router is1
+	target router=20
+	target router=5
+2   buffered to->>> 2source router is1
+	target router=20
+	target router=5
+3   buffered to->>> 3source router is2
+	target router=-1
+1   buffered to->>> 1source router is2
+	target router=-1
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=2
+1   buffered to->>> 1source router is0
+	target router=2
+3   buffered to->>> 3source router is2
+	target router=0
+1   buffered to->>> 1source router is2
+	target router=0
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=1
+0   buffered to->>> 0source router is3
+	target router=1
+1   buffered to->>> 1source router is3
+	target router=1
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=2
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+3   buffered to->>> 3source router is2
+	target router=0
+1   buffered to->>> 1source router is2
+	target router=0
+3   buffered to->>> 3source router is0
+	target router=2
+1   buffered to->>> 1source router is0
+	target router=2
+3   buffered to->>> 3source router is2
+	target router=0
+1   buffered to->>> 1source router is2
+	target router=0
+3   buffered to->>> 3source router is0
+	target router=2
+1   buffered to->>> 1source router is0
+	target router=2
+3   buffered to->>> 3source router is2
+	target router=0
+1   buffered to->>> 1source router is2
+	target router=0
+3   buffered to->>> 3source router is0
+	target router=2
+1   buffered to->>> 1source router is0
+	target router=2
+3   buffered to->>> 3source router is2
+	target router=0
+1   buffered to->>> 1source router is2
+	target router=0
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is3
+	target router=0
+	target router=1
+	target router=2
+0   buffered to->>> 0source router is3
+	target router=0
+	target router=1
+	target router=2
+1   buffered to->>> 1source router is3
+	target router=0
+	target router=1
+	target router=2
+2   buffered to->>> 2source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is1
+	target router=0
+	target router=2
+	target router=3
+0   buffered to->>> 0source router is1
+	target router=0
+	target router=2
+	target router=3
+2   buffered to->>> 2source router is1
+	target router=0
+	target router=2
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is0
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is0
+	target router=1
+	target router=3
+3   buffered to->>> 3source router is2
+	target router=1
+	target router=3
+1   buffered to->>> 1source router is2
+	target router=1
+	target router=3
+3   buffered to->>> 3

@@ -1,0 +1,418 @@
+updating router:1
+src=0,target=1,cost=20,number=4
+src=0,target=3,cost=7,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 -1 0 -1 
+-1 -1 -1 0 
+the changer is 0
+
+updating router:3
+src=0,target=1,cost=20,number=4
+src=0,target=3,cost=7,number=4
+0 20 -1 7 
+-1 0 -1 -1 
+-1 -1 0 -1 
+7 10 1 0 
+the changer is 0
+
+updating router:0
+src=1,target=0,cost=20,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=10,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 -1 0 -1 
+-1 -1 -1 0 
+the changer is 1
+0 20 25 7 
+20 0 5 10 
+-1 -1 0 -1 
+-1 -1 -1 0 
+
+updating router:2
+src=1,target=0,cost=20,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=10,number=4
+0 -1 -1 -1 
+20 0 5 10 
+-1 5 0 1 
+-1 -1 -1 0 
+the changer is 1
+0 -1 -1 -1 
+20 0 5 10 
+25 5 0 1 
+-1 -1 -1 0 
+
+updating router:3
+src=1,target=0,cost=20,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=10,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 -1 0 -1 
+7 10 1 0 
+the changer is 0
+
+updating router:1
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 5 0 1 
+-1 -1 -1 0 
+the changer is 1
+0 20 -1 7 
+20 0 5 6 
+-1 5 0 1 
+-1 -1 -1 0 
+
+updating router:3
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 5 0 1 
+7 10 1 0 
+the changer is 1
+0 20 -1 7 
+20 0 5 10 
+-1 5 0 1 
+7 6 1 0 
+
+updating router:0
+src=3,target=0,cost=7,number=4
+src=3,target=1,cost=10,number=4
+src=3,target=2,cost=1,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 -1 0 -1 
+7 10 1 0 
+the changer is 1
+0 17 8 7 
+20 0 5 10 
+-1 -1 0 -1 
+7 10 1 0 
+
+updating router:1
+src=3,target=0,cost=7,number=4
+src=3,target=1,cost=10,number=4
+src=3,target=2,cost=1,number=4
+0 20 -1 7 
+20 0 5 6 
+-1 5 0 1 
+7 10 1 0 
+the changer is 1
+0 20 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 10 1 0 
+
+updating router:2
+src=3,target=0,cost=7,number=4
+src=3,target=1,cost=10,number=4
+src=3,target=2,cost=1,number=4
+0 -1 -1 -1 
+20 0 5 10 
+-1 5 0 1 
+7 10 1 0 
+the changer is 1
+0 -1 -1 -1 
+20 0 5 10 
+8 5 0 1 
+7 10 1 0 
+
+updating router:1
+src=0,target=1,cost=20,number=4
+src=0,target=3,cost=7,number=4
+0 20 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 10 1 0 
+the changer is 0
+
+updating router:3
+src=0,target=1,cost=20,number=4
+src=0,target=3,cost=7,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 20 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 10 1 0 
+the changer is 0
+
+updating router:3
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 20 -1 7 
+20 0 5 10 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:0
+src=1,target=0,cost=20,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=6,number=4
+0 17 -1 7 
+20 0 5 6 
+-1 -1 0 -1 
+7 10 1 0 
+the changer is 1
+0 17 8 7 
+20 0 5 6 
+-1 -1 0 -1 
+7 10 1 0 
+
+updating router:2
+src=1,target=0,cost=20,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=6,number=4
+0 -1 -1 -1 
+20 0 5 6 
+-1 5 0 1 
+7 10 1 0 
+the changer is 1
+0 -1 -1 -1 
+20 0 5 6 
+8 5 0 1 
+7 10 1 0 
+
+updating router:3
+src=1,target=0,cost=20,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=6,number=4
+0 20 -1 7 
+20 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:0
+src=3,target=0,cost=7,number=4
+src=3,target=1,cost=6,number=4
+src=3,target=2,cost=1,number=4
+0 17 -1 7 
+20 0 5 6 
+-1 -1 0 -1 
+7 6 1 0 
+the changer is 1
+0 13 8 7 
+20 0 5 6 
+-1 -1 0 -1 
+7 6 1 0 
+
+updating router:1
+src=3,target=0,cost=7,number=4
+src=3,target=1,cost=6,number=4
+src=3,target=2,cost=1,number=4
+0 20 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:2
+src=3,target=0,cost=7,number=4
+src=3,target=1,cost=6,number=4
+src=3,target=2,cost=1,number=4
+0 -1 -1 -1 
+20 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 1
+0 -1 -1 -1 
+20 0 5 6 
+8 5 0 1 
+7 6 1 0 
+
+updating router:1
+src=0,target=1,cost=17,number=4
+src=0,target=3,cost=7,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=0,target=1,cost=17,number=4
+src=0,target=3,cost=7,number=4
+0 17 -1 7 
+20 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:0
+src=1,target=0,cost=13,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=6,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 -1 0 -1 
+7 6 1 0 
+the changer is 1
+0 13 8 7 
+13 0 5 6 
+-1 -1 0 -1 
+7 6 1 0 
+
+updating router:2
+src=1,target=0,cost=13,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=6,number=4
+0 -1 -1 -1 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 1
+0 -1 -1 -1 
+13 0 5 6 
+8 5 0 1 
+7 6 1 0 
+
+updating router:3
+src=1,target=0,cost=13,number=4
+src=1,target=2,cost=5,number=4
+src=1,target=3,cost=6,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=0,target=1,cost=17,number=4
+src=0,target=3,cost=7,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=0,target=1,cost=17,number=4
+src=0,target=3,cost=7,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 17 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=0,target=1,cost=13,number=4
+src=0,target=3,cost=7,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=0,target=1,cost=13,number=4
+src=0,target=3,cost=7,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=0,target=1,cost=13,number=4
+src=0,target=3,cost=7,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=0,target=1,cost=13,number=4
+src=0,target=3,cost=7,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:1
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+
+updating router:3
+src=2,target=1,cost=5,number=4
+src=2,target=3,cost=1,number=4
+0 13 -1 7 
+13 0 5 6 
+-1 5 0 1 
+7 6 1 0 
+the changer is 0
+

@@ -1,17 +1,22 @@
 #include "header.h"
 
-#define PILANI 1
-#define GOA 2
-#define HYDERABAD 3
+#define PILANI 0
+#define GOA 1
+#define HYDERABAD 2
 
 int pilaniSocketId, goaSocketId, hydSocketId;
 int campus;
-int available_ids[7];
 int arrivals[100];
 int socket_id;
 typedef struct {
     int index;
 } ThreadArgs;
+
+typedef struct{
+    int srcCampus;
+    int srcCampus_port;
+}receive_args;
+
 
 typedef struct{
     int id;
@@ -20,11 +25,67 @@ typedef struct{
     int exit_state;
 }Department;
 
-Department departments[100];
-char pilani_departments[1024][1024];
-char hyd_departments[1024][1024];
-char goa_departments[1024][1024];
+Department departments[3][100];
+
 int pc=0,gc=0,hc=0;
+int numOfValidDept[3];
+int validDept[3][7];
+
+void *recv_thread(void *arg) {
+    receive_args *args = (receive_args *)arg;
+    int srcCampus=args->srcCampus;
+    int srcCampus_port=args->srcCampus_port;
+    char message[1024];
+    while (1) {
+        memset(message,0,1024);
+        int recv_count = recv(srcCampus_port, message, 1024, 0);
+        if (recv_count == -1) {
+            perror("recv");
+            exit(1);
+        } else if (recv_count == 0) {
+            printf("Connection closed by server\n");
+            exit(0);
+        } else {
+            char data[1024];
+            memset(data,0,1024);
+            struct packet* p=deserialize(message);
+            strcpy(data,p->data);
+            if(p->headerLength==6){
+                char* saveptr,*word;
+                char value[1024];
+                for(word=strtok_r(data,"|",&saveptr);word;word=strtok_r(NULL,"|",&saveptr)){
+                    memset(value,0,1024);
+                    strcpy(value,word);
+                    char* word2,*saveptr2;
+                    word2=strtok_r(value,";",&saveptr2);
+                    int department_id;
+                    if(word2[0]=='P')department_id=0;
+                    else if(word2[0]=='G')department_id=1;
+                    else department_id=2;
+                    int count=0;
+                    for(word2=strtok_r(NULL,";",&saveptr2);word2;word2=strtok_r(NULL,";",&saveptr2)){
+                        char dept[1024];
+                        memset(dept,0,1024);
+                        strcpy(dept,word2);
+                        char* saveptr3;
+                        char * name,*id;
+                        name=strtok_r(dept,"=",&saveptr3);
+                        id=strtok_r(NULL,"=",&saveptr3);
+                        validDept[department_id][count]=atoi(id);
+                        
+                    }
+                }
+
+
+            }
+            
+        }
+    }
+    return NULL;
+
+}
+
+
 
 int client_create_connection(char* addr,int port){
     int client_sockfd;
@@ -132,7 +193,7 @@ int client_connect(int socket_id) {
 
 
 int serverSetupPilani(char* addr, int goaPort, int hydPort){
-    myCampus = PILANI;
+    campus = PILANI;
     int goa_server = create_connection(addr,goaPort);
     int goa_port=client_connect(goa_server);
     struct packet*p;
@@ -157,6 +218,14 @@ int serverSetupPilani(char* addr, int goaPort, int hydPort){
     p= deserialize(reply);
     printf("%d\n",p->ACK);
     free(p);
+    receive_args rcg;
+    rcg.srcCampus= GOA;
+    rcg.srcCampus_port=goa_port;
+    pthread_t tg;
+    pthread_create(&tg, NULL, recv_thread, (void *)&rcg);
+
+
+
 
     // initialising with the hyderabad campus
 
@@ -170,21 +239,31 @@ int serverSetupPilani(char* addr, int goaPort, int hydPort){
     strcpy(message,serialize(p));
     if((send(hyd_port,message, strlen(message), 0)) == -1)printf("error in sending to goa by pilani\n");
     free(p);
-    if (recv(goa_port,reply, 1024, 0) == -1) {
-            perror("recv from goa to pilani");
-            close(goa_port);
+    if (recv(hyd_port,reply, 1024, 0) == -1) {
+            perror("recv from hyd to pilani");
+            close(hyd_port);
     }
     struct packet*p;
     p = (struct packet *)malloc(sizeof(struct packet));
     p= deserialize(reply);
     printf("%d\n",p->ACK);
     free(p);
+    receive_args rch;
+    rch.srcCampus= HYDERABAD;
+    rch.srcCampus_port=hyd_port;
+    pthread_t th;
+    pthread_create(&th, NULL, recv_thread, (void *)&rch);
+    
+    pthread_join(tg,NULL);
+    printf("goa thread of pilani campus joined\n");
+    pthread_join(th,NULL);
+    printf("hyderabad thread of pilani campus joined\n");
 
     return 1;
 }
 
 int serverSetupGoa(char* addr, int pilaniPort, int hydPort){
-    myCampus = GOA;
+    campus = GOA;
     struct packet*p;
     p = (struct packet *)malloc(sizeof(struct packet));
     char message[1024];
@@ -208,6 +287,13 @@ int serverSetupGoa(char* addr, int pilaniPort, int hydPort){
     if((send(pilani_port,message, strlen(message), 0)) == -1)printf("error in sending by goa to pilani\n");
     free(p);
 
+    receive_args rcp;
+    rcp.srcCampus= PILANI;
+    rcp.srcCampus_port=pilani_port;
+    pthread_t tp;
+    pthread_create(&tp, NULL, recv_thread, (void *)&rcp);
+
+
     //connecting with hyd port
     int hyd_server = create_connection(addr,hydPort);
     int hyd_port=client_connect(hyd_server);
@@ -228,12 +314,25 @@ int serverSetupGoa(char* addr, int pilaniPort, int hydPort){
     p= deserialize(reply);
     printf("%d\n",p->ACK);
     free(p);
+
+    receive_args rch;
+    rch.srcCampus= HYDERABAD;
+    rch.srcCampus_port=hyd_port;
+    pthread_t th;
+    pthread_create(&th, NULL, recv_thread, (void *)&rch);
+
+
+    pthread_join(tp,NULL);
+    printf("pilani thread of campus joined\n");
+    pthread_join(th,NULL);
+    printf("hyderabad thread of goa campus\n");
+
     return 1;
     
 }
 
 int serverSetupHyderabad(char* addr, int pilaniPort, int goaPort){
-    myCampus = HYDERABAD;
+    campus = HYDERABAD;
     struct packet*p;
     p = (struct packet *)malloc(sizeof(struct packet));
     char message[1024];
@@ -258,6 +357,12 @@ int serverSetupHyderabad(char* addr, int pilaniPort, int goaPort){
     if((send(pilani_port,message, strlen(message), 0)) == -1)printf("error in sending by goa to pilani\n");
     free(p);
 
+    receive_args rcp;
+    rcp.srcCampus= PILANI;
+    rcp.srcCampus_port=pilani_port;
+    pthread_t tp;
+    pthread_create(&tp, NULL, recv_thread, (void *)&rcp);
+
     //conneting to goa campus
     struct packet*p;
     p = (struct packet *)malloc(sizeof(struct packet));
@@ -281,6 +386,18 @@ int serverSetupHyderabad(char* addr, int pilaniPort, int goaPort){
     if((send(goa_port,message, strlen(message), 0)) == -1)printf("error in sending by goa to pilani\n");
     free(p);
 
+    receive_args rcg;
+    rcg.srcCampus= GOA;
+    rcg.srcCampus_port=goa_port;
+    pthread_t tg;
+    pthread_create(&tg, NULL, recv_thread, (void *)&rcg);
+
+    pthread_join(tp,NULL);
+    printf("pilani thread of hyd campus joined\n");
+    pthread_join(tg,NULL);
+    printf("goa thread of hyd campus\n");
+
+
     return 1;
    
 }
@@ -290,17 +407,20 @@ int serverSetupHyderabad(char* addr, int pilaniPort, int goaPort){
 
 void * client_handler(void* arg){
     ThreadArgs *args = (ThreadArgs *)arg;
-    int i = args->index;
+    int ind = args->index;
     int client_id = client_connect(socket_id);
-    departments[i].sock_id = client_id;
+    int dest;
     for(int i=1;i<6;i++){
-        if(available_ids[i]==1){
-            departments[i].id=i;
-            departments[i].exit_state=0;
-            available_ids[i]=0;
+        if(departments[campus][i].exit_state==1){
+            departments[campus][i].sock_id = client_id;
+            departments[campus][i].id=i;
+            departments[campus][i].exit_state=0;
+            validDept[campus][numOfValidDept[campus]]=i;
+            numOfValidDept[campus]++;
+            dest=i;
         }
     }
-    arrivals[i]=1;
+    arrivals[ind]=1;
     char buffer[1024];
     memset(buffer,0,1024);
     char name[1024];
@@ -313,10 +433,17 @@ void * client_handler(void* arg){
     struct packet *p;
     p = (struct packet *)malloc(sizeof(struct packet));
     p=deserialize(buffer);
-    if(campus==GOA){
-        gc++;
-
+    
+    char reply[1024];
+    memset(reply,0,1024);
+    strcpy(reply,generateAcknowledgmentPacket(0,dest,validDept,numOfValidDept));
+    if((send(client_id, reply, strlen(reply), 0)) == -1){
+            printf("send_error");
+            exit(1);
     }
+
+
+
 
 
 }
@@ -347,18 +474,14 @@ int main(int argc, char *argv[])
         printf("Invalid campus\n");
         return -1;
     }
-    memset(pilani_departments,0,sizeof(pilani_departments));
-    memset(hyd_departments,0,sizeof(hyd_departments));
-     memset(goa_departments,0,sizeof(goa_departments));
-
-    for(int i=0;i<7;i++)available_ids[i]=1;
     for(int i=0;i<7;i++){
-        memset(departments[i].name,0,1024);
-        departments[i].exit_state=1;
+        memset(departments[campus][i].name,0,1024);
+        
+        departments[campus][i].exit_state=1;
     }
     int socket_id = create_connection(addr, port3);
-    pthread_t threads[7];
-    ThreadArgs thread_args[7];
+    pthread_t threads[100];
+    ThreadArgs thread_args[100];
     for (int i = 0; i < 100; i++) {
         thread_args[i].index = i;
         arrivals[i]=0;
